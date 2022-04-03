@@ -26,11 +26,14 @@ textarea{
 }
 
 .time-block{
+  border: solid black 1px;	
+  width: 75px;
   text-align: center;
   border-radius: 15px;
 }
 
 .row {
+  display: flex;
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;

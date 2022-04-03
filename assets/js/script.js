@@ -9,4 +9,28 @@ $(".saveBtn").click(function (event) {
     var time = $(this).parent().attr("id").split("-")[1];
     localStorage.setItem(time, value);
   });
+// Lists current hour using moment js
+function thisHour() {
+    //get current number of hours
+    var currentHour = moment().hour();
+    // loop over time blocks
+    $(".time-block").each(function () {
+        var blockHour = parseInt($(this).attr("id"));
+        console.log( blockHour, currentHour)
 
+        //changes css for current, past, and future hours
+        if (blockHour < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("future","present");         
+        }
+        else if (blockHour === currentHour) {
+            $(this).addClass("present");
+            $(this).removeClass("past","future");        
+        }
+        else {
+            $(this).addClass("future");
+            $(this).removeClass("past", "present");            
+        }
+    })
+}
+thisHour();
