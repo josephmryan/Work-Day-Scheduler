@@ -3,12 +3,14 @@ var todaysDate = moment().format('dddd, MMM Do YYYY');
     $("#currentDay").html(todaysDate);
 
 // Saves time and values to local storage
-$(".saveBtn").click(function (event) {
-    event.preventDefault();
-    var value = $(this).siblings(".time-block").val();
-    var time = $(this).parent().attr("id").split("-")[1];
+$(".saveBtn").click(function() {
+    var value = $(this).siblings(".time-block").attr('id');
+    var time = $(this).siblings(".time-block").val();
     localStorage.setItem(time, value);
+
+    
   });
+
 // Lists current hour using moment js
 function thisHour() {
     //get current number of hours

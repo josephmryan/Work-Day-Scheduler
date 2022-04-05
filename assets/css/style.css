@@ -5,6 +5,7 @@ body {
 }
 
 textarea{
+  flex-grow: 2;
   background: transparent;
   border: none;
   resize: none;
@@ -25,14 +26,15 @@ textarea{
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block.past.future.present{
   border: solid black 1px;	
-  width: 75px;
+  resize: none;
   text-align: center;
   border-radius: 15px;
 }
 
 .row {
+  width: auto;
   display: flex;
   white-space: pre-wrap;
   height: 80px;
@@ -47,17 +49,17 @@ textarea{
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
